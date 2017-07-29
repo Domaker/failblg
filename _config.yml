@@ -1,1 +1,13 @@
-theme: jekyll-theme-cayman
+# Site Seting
+title: maker
+tagline: "cn"
+description: "Maker | Personal blog"
+baseurl: ""
+
+# About 
+owner:
+  name: "DoMaker",
+  email: "maker68@163.com"
+
+favicon: img/favicon.png
+
