@@ -4,7 +4,7 @@ header-img: "img/green.jpg"
 tagline: "cn"  
 description: "Maker | Personal Blog"  
 baseurl: ""
-url: "http://domaker"  
+url: "https://domaker.github.com"  
 
 # About/contact
 owner: 
