@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="content">
+		<div class="content-box">
+			<div class="boxs">
+				<header>
+					<div class="post-heading">
+	                    <div class="tag">
+	                    	<i class="fa fa-fw fa-tag"></i> 
+	                        {% for tag in page.tags %}
+	                        <a class="" href="/Tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+	                        {% endfor %}
+	                    </div>
+	                    <h1>{{ page.title }}</h1>
+	                    {% if page.subtitle %}
+	                    <h2 class="subheading">{{ page.subtitle }}</h2>
+	                    {% endif %}
+	                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+	                </div>
+				</header>
+				<article>
+					
+					{{ content }}
+
+	                <hr>
+
+	                <ul class="pager">
+	                    {% if page.previous.url %}
+	                    <li class="previous">
+	                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+	                    </li>
+	                    {% endif %}
+	                    {% if page.next.url %}
+	                    <li class="next">
+	                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+	                    </li>
+	                    {% endif %}
+	                </ul>
+				</article>
+			</div>
+		</div>	
+	</div>
+</div>
